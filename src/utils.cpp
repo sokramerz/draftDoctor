@@ -32,6 +32,12 @@ const std::vector<Transaction>& DataLoader::get_transactions() const {
 }
 
 bool DataLoader::load_data(const std::string& file_path) {
+    // Reset previous state so each load starts fresh
+    transactions.clear();
+    name_to_id.clear();
+    id_to_name.clear();
+    next_id = 1;
+
     std::ifstream file(file_path);
     if (!file.is_open()) {
         std::cerr << "Error: Could not open " << file_path << "\n";
