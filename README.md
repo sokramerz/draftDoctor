@@ -143,12 +143,11 @@ ctest
 # Run benchmarks
 ./bench_run
 ```
-(If you have not added tests/benchmarks yet, these targets will simply run and exit.)
 ---
 ## Authors
 * **Stephen Kramer** (`sokramerz`) – primary implementation lead (core code, CLI, data loading, algorithms).
 * **Alejandro Simon** (`asimon-ufl`) – report author, documentation, FP-Growth design contributions, and polish.
-* **Jacob McDaniel** – README author, contributed to selected features and testing support.
+* **Jacob McDaniel** (`mrjacob8282`) – README author, contributed to selected features and testing support.
 ---
 ## License
 This project is for educational purposes as part of a university course.
