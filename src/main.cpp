@@ -101,8 +101,12 @@ void run_race(DataLoader& loader) {
     std::cout << t2.count() << " ms.\n";
 
     // Result
-    std::cout << "\n>>> Speedup: FP-Growth was " << (t1.count() / t2.count()) << "x faster.\n";
-    
+    if (t2.count() > 0.0) {
+        std::cout << "\n>>> Speedup: FP-Growth was " << (t1.count() / t2.count()) << "x faster.\n";
+    } else {
+        std::cout << "\n>>> Speedup: FP-Growth finished too quickly to measure reliably.\n";
+    }
+
     // Both will now print identical top lists
     print_top_patterns(p2, loader);
 }
