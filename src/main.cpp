@@ -100,6 +100,14 @@ void run_race(DataLoader& loader) {
     std::chrono::duration<double, std::milli> t2 = end2 - start2;
     std::cout << t2.count() << " ms.\n";
 
+    // Validation step for algos
+    std::cout << "\n VALIDATION \n";
+    if (p1.size() == p2.size()) {
+        std::cout << "[SUCCESS] Both algorithms found exactly " << p1.size() << " patterns.\n";
+    } else {
+        std::cout << "[WARNING] Discrepancy detected! (" << p1.size() << " vs " << p2.size() << ")\n";
+    }
+    
     // Result
     if (t2.count() > 0.0) {
         std::cout << "\n>>> Speedup: FP-Growth was " << (t1.count() / t2.count()) << "x faster.\n";
